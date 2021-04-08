@@ -5,7 +5,7 @@
             <%= user.username.toUpperCase() %>
         </h1></b>
         <div class="row col-4 mb-3 ">
-            <div class="card bg-dark text-white">
+            <div class="bg-dark text-white">
                 <div class="container_profile avatar">
                     <% user.avatar.forEach((ava, i) => { %>
                         <% if(user.avatar.length)  {%>
@@ -17,44 +17,52 @@
                 <% }) %>
                     <div class="card-body text-center">
                         <div class="mb-3">
+                            <b><span>Username:</span>
                             <b><a>
-                                <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
+                                <%=user.username.toUpperCase() %>
                             </a></b>
                         </div>
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <b><span>Name:</span>
+                                <b><a>
+                                <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
+                            </a></b>
+                            </div>
 
 
-                        <div class="mb-3">
-                            <b><span>EMAIL:</span>
+                            <div class="mb-3">
+                                <b><span>EMAIL:</span>
                             <a>
                                 <%=user.email %>
                             </a>
                         </b>
-                        </div>
-                        <% if(currentUser && currentUser._id.equals(user._id)) { %>
-                            <div class="card-body">
-                                <a class="card-link btn btn-primary w-100" href="/users/<%= user._id %>/edit ">Edit</a>
-
                             </div>
-                            <%} %>
+                            <% if(currentUser && currentUser._id.equals(user._id)) { %>
+                                <div class="card-body">
+                                    <a class="card-link btn btn-primary w-100" href="/users/<%= user._id %>/edit ">Edit</a>
+
+                                </div>
+                                <%} %>
 
 
 
+                        </div>
+                        <div class="mb-3">
+                            <b><a style="text-decoration: none;" href="/ "><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <b><a style="text-decoration: none;" href="/ "><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
-                    </div>
+
             </div>
 
         </div>
 
-    </div>
-
-    <script>
-        function ConfirmDelete() {
-            var x = confirm("Are you sure you want to delete?");
-            if (x)
-                return true;
-            else
-                return false;
-        }
-    </script>
+        <script>
+            function ConfirmDelete() {
+                var x = confirm("Are you sure you want to delete?");
+                if (x)
+                    return true;
+                else
+                    return false;
+            }
+        </script>
