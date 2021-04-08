@@ -1,0 +1,10 @@
+<% layout('layouts/boilerplate') %>
+    <div class="text-white">
+        <% for (let application of applications) { %>
+
+            <h4>
+                <%= application.author.username %>
+            </h4>
+            <% } %>
+
+    </div>

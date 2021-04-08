@@ -1,0 +1,126 @@
+.intro h1 {
+    font-size: 3em;
+    font-weight: 1000;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.panel {
+    background-color: rgb(35, 37, 35);
+    border: solid 1px;
+    border-color: rgb(176, 46, 12);
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.role-plan {
+    border-bottom: 1px solid rgb(176, 46, 12);
+}
+
+.role-plan:last-child {
+    border-bottom: none;
+}
+
+.role-img {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.role-header {
+    color: #888;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.role-features {
+    margin: 50px 0 25px;
+    padding: 0;
+    color: rgb(176, 46, 12);
+}
+
+.role-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgb(176, 46, 12);
+}
+
+.role-features-item:last-child {
+    border-bottom: 1px solid rgb(176, 46, 12);
+}
+
+.role-price {
+    color: rgb(176, 46, 12);
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.role-button {
+    border: 1px solid white;
+    border-radius: 0px;
+    color: rgb(176, 46, 12);
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+.apply_button {
+    background-color: rgb(176, 46, 12);
+    margin: auto;
+    width: 10%;
+    border: 3px solid rgb(35, 37, 35);
+    padding: 10px;
+}
+
+a.role-button:hover,
+a.role-button:focus {
+    background-color: white;
+    color: black;
+}
+
+role-button.is-featured {
+    background-color: rgb(176, 46, 12);
+    color: white;
+}
+
+role-button.is-featured:hover,
+.role-button.is-featured:focus {
+    background-color: rgb(176, 46, 12);
+    color: white;
+}
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+    .role-plan {
+        border-bottom: none;
+        border-right: 1px solid rgb(176, 46, 12);
+        padding: 25px 50px;
+    }
+    .role-plan:last-child {
+        border-right: none;
+    }
+}

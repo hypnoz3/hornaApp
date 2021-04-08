@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="col-4 offset-md-4 mb-5 justify-content-center">
+        <div class="bg-dark text-white">
+            <div class="">
+                <form action="/raids" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title</label>
+                        <input class="form-control" type="text" id="title" name="raid[title]" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="releaseDate">Release Date</label><br>
+                        <input type="date" id="releaseDate" name="raid[releaseDate]">
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="raid[expansion_id]">Select expansion</label>
+                        <select class="form-select" aria-label="Default select example" name="raid[expansion_id]" id="expansion_id" required>
+                            <option selected>Select</option>
+                            <option value="wod">Warlord Of Draenor</option>
+                            <option value="legion">Legion</option>
+                            <option value="bfa">Battle for Azeroth</option>
+                            <option value="sl">Shadowlands</option>
+                          </select>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Upload Banner</label>
+                        <input class="form-control" type="file" id="banner" name="banner">
+                    </div>
+                    <div class="mb-3 ">
+                        <button class="btn btn-success">Add Raid</button>
+                    </div>
+
+                </form>
+                <a href="/">Back</a>
+            </div>
+        </div>
+    </div>

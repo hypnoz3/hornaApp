@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') %>
+    <link rel="stylesheet" href="/stylesheets/applications.css">
+    <div class="row align-items-start">
+        <div class="col-2 pe-3">
+            <% for (let application of applications) { %>
+                <a href="/applications/<%=application._id %> " class="text-white is-featured">
+                    <div class="card shadow bg-dark mb-3 me-3" id="applicationsMenu">
+                        <span class="text-white">HAKEMUS</span>
+                        <a class="text-white">
+                            <%= application.author.username %>
+                        </a>
+                        <div class="container_nav_picture" style="max-height: 32px;">
+                            <% application.author.avatar.forEach((ava, i) => { %>
+                                <img class="avatar-img w-100" style="max-width: 32px; max-height: 32px; border-radius: 50%;" src="<%= ava.url %>" alt="...">
+                                <% }) %>
+                        </div>
+                    </div>
+                </a>
+
+                <% } %>
+        </div>
+        <div class=" bg-dark mb-3 text-white col-8">
+            <h1 class="text-center mb-3">HAKEMUS</h1>
+            <div class="card-body">
+                <h5>Mistä osa-alueesta wowissa olet kiinnostunut?</h5>
+                <p class="card-text">
+                    <%= application.playstyle %>
+                </p>
+                <hr>
+                <h5>Millaista roolia pelaat mieluiten?</h5>
+                <p class="card-text">
+                    <%= application.role1, application.role2, application.role3 %>
+                </p>
+                <hr>
+                <h5>Haluaisimme tietää millainen ihminen hahmon takaa löytyy, joten kerro tarinaa itsestäsi?</h5>
+                <p class="card-text">
+                    <%= application.q1 %>
+                </p>
+                <hr>
+                <h5>Millaista kokemusta sinulla on raidaamisesta?</h5>
+                <p class="card-text">
+                    <%= application.q2 %>
+                </p>
+                <hr>
+                <h5>Jos olet kiinnostunut raidaamisesta kanssamme, miten paljon haluat / kykenet raideihimme osallistumaan? Raidiaikamme ovat keskiviikkona, torstaina ja sunnuntaina 19.30-22.30</h5>
+                <p class="card-text">
+                    <%= application.q3 %>
+                </p>
+                <hr>
+                <h5>Miksi haluat liittyä Hornaan? Odotuksesi killalta?</h5>
+                <p class="card-text">
+                    <%= application.q4 %>
+                </p>
+                <hr>
+                <h5>Tunnetko ketään Hornasta ennestään? Kenet ja mistä tunnette toisenne?</h5>
+                <p class="card-text">
+                    <%= application.q5 %>
+                </p>
+                <hr>
+                <h5>Hienoa, kiitos hakemuksestasi ja ole hyvä, saat viimeisen sanan.. </h5>
+                <p class="card-text">
+                    <%= application.q6 %>
+                </p>
+            </div>
+
+        </div>
+    </div>

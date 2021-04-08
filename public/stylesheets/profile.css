@@ -1,0 +1,16 @@
+/* .avatar-img {
+    clip-path: circle();
+} */
+
+ul.campgrounds a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.card {
+    box-shadow: 0px 0px 20px 8px rgb(176, 46, 12);
+}

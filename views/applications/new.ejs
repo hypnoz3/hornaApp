@@ -1,0 +1,115 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="col-8 offset-md-2 mb-5 justify-content-center">
+        <div class="bg-dark text-white">
+            <div>
+                <form action="/applications" method="POST" novalidate class="validated-form">
+
+                    <div class="mb-3">
+                        <p>Mistä osa-alueesta wowissa olet kiinnostunut?</p>
+                        <select class="form-select w-auto" aria-label="" id="playstyle" name="application[playstyle]" onchange="playstyleSelection()" required>
+                            <option selected value="valitse">Valitse</option>
+                            <option value="Social" id="social">Social</option>
+                            <option value="Raid" id="raid">Raid</option>
+                          </select>
+                    </div>
+                    <hr>
+                    <div class="mb-3" multiple>
+                        <p>Millaista roolia pelaat mieluiten?(voit valita useamman vaihtoehdon)</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="DPS" id="role1" name="application[role1]">
+                            <label class="form-check-label" for="role1">
+                              DPS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Tank" id="role2" name="application[role2]">
+                            <label class="form-check-label" for="role2">
+                              Tank
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Healer" id="role3" name="applcation[role2]">
+                            <label class="form-check-label" for="role3">
+                              Healer
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label class="form-label" for="q1">Haluaisimme tietää millainen ihminen hahmon takaa löytyy, joten kerro tarinaa itsestäsi?<br>
+
+                                Runoilemaan sinun ei ole pakko tässä kohtaa ryhtyä mutta koska rekrytoimme ensisijaisesti ihmisiä, emme gearia, arvostamme luonnollisesti hyvin kirjoitettua hakemusta, missä kerrot itsestäsi avoimesti.  <br>
+                                
+                                Toki sitä runoiluakaan ei ole kielletty eli anna palaa vapaasti jos siltä sattuu tuntumaan!</label>
+                        <textarea class="form-control" type="text" id="q1" name="application[q1]" cols="30" rows="3" required></textarea>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div id="raid_lomake" style="display:none;">
+                        <div class="mb-3">
+                            <label class="form-label" for="q2">Millaista kokemusta sinulla on raidaamisesta?</label>
+                            <textarea class="form-control" type="text" id="q2" name="application[q2]" cols="30" rows="3" required></textarea>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="q3">Jos olet kiinnostunut raidaamisesta kanssamme, miten paljon haluat / kykenet raideihimme osallistumaan? Raidiaikamme ovat keskiviikkona, torstaina ja sunnuntaina 19.30-22.30</label>
+                            <textarea class="form-control" type="text" id="q3" name="application[q3]" cols="30" rows="3" required></textarea>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="q4">Miksi haluat liittyä Hornaan? Odotuksesi killalta?</label>
+                        <textarea class="form-control" type="text" id="q4" name="application[q4]" cols="30" rows="3" required></textarea>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label class="form-label" for="q5">Tunnetko ketään Hornasta ennestään? Kenet ja mistä tunnette toisenne?</label>
+                        <textarea class="form-control" type="text" id="q5" name="application[q5]" cols="30" rows="1" required></textarea>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label class="form-label" for="q6">Hienoa, kiitos hakemuksestasi ja ole hyvä, saat viimeisen sanan.. </label>
+                        <textarea class="form-control" type="text" id="q6" name="application[q6]" required></textarea>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-success">Send Application</button>
+                    </div>
+
+                </form>
+                <a href="/">Back</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playstyleSelection() {
+            //if raid -selected
+            if (document.getElementById("playstyle") != null && document.getElementById("playstyle").value == "Raid") {
+                //show lomake
+                document.getElementById("raid_lomake").style.display = "";
+                //set required attribute by input ids
+                $('#q2, #q3').attr('required');
+            } else {
+                document.getElementById("raid_lomake").style.display = "none";
+                //remove required attribute by id
+                $('#q2, #q3').removeAttr('required');
+            }
+        }
+    </script>

@@ -1,0 +1,11 @@
+    #applicationsMenu a {
+        display: block;
+        padding: 3px;
+        text-decoration: none;
+        font-weight: 900;
+    }
+    
+    #applicationsMenu a.is-featured:focus {
+        color: rgb(176, 46, 12);
+        box-shadow: 0px 0px 5px 5px rgb(176, 46, 12);
+    }

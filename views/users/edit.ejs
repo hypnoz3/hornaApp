@@ -1,0 +1,75 @@
+<% layout('layouts/boilerplate') %>
+    <div class="container d-flex justify-content-center align-items-center mb-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow">
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Update your profile</h5>
+                        <form action="/users/<%= user._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                            <div class="mb-3 ">
+                                <label class="form-label" for="username">Username</label>
+                                <input class="form-control" type="text" id="username" name="username" value="<%= user.username %> " required>
+                                <div class="valid-feedback ">
+                                    Looks Good!
+                                </div>
+                            </div>
+                            <div class="mb-3 ">
+                                <label class="form-label" for="firstName">First Name</label>
+                                <input class="form-control" type="text" id="firstName" name="firstName" value="<%= user.firstName %> " required>
+                                <div class="valid-feedback ">
+                                    Looks Good!
+                                </div>
+                            </div>
+                            <div class="mb-3 ">
+                                <label class="form-label" for="lastName">Last Name</label>
+                                <input class="form-control" type="text" id="lastName" name="lastName" value="<%= user.lastName %> " required>
+                                <div class="valid-feedback ">
+                                    Looks Good!
+                                </div>
+                            </div>
+                            <div class="mb-3 ">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control" type="email" id="email" name="email" value="<%= user.email %> " required>
+                                <div class="valid-feedback">
+                                    Looks Good!
+                                </div>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <label class="form-label" for="password">Password</label>
+                                <input class="form-control" type="password" id="password" name="password" value="" required>
+                                <div class="valid-feedback ">
+                                    Looks Good!
+                                </div>
+                            </div> -->
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label">Avatar</label>
+                                <input class="form-control" type="file" id="avatar" name="avatar" multiple>
+                            </div>
+
+                            <div class="mb-3">
+                                <h5>Current avatar:</h5>
+                                <% user.avatar.forEach(function(ava, i ){ %>
+                                    <img src="<%= ava.thumbnail %> " class="img-thumbnail" alt="">
+                                    <div class="form-check-inline">
+                                        <input type="checkbox" id="avatar.<%i%>" name="deleteavatar[]" value="<%=ava.filename%>">
+                                    </div>
+                                    <label for="avatar.<%i%>">Delete?</label>
+                                    <% })%>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success w-100 ">Update</button>
+                            </div>
+                        </form>
+                        <div class="mb-3">
+                            <form class="d-inline" action="/users/<%= user._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-danger w-100" onclick="return confirm('Are you sure you want to delete your user account?');">Delete Account?</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>

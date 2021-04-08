@@ -1,0 +1,164 @@
+                     body {
+                         background: rgb(20, 17, 17);
+                     }
+                     
+                     .container {
+                         width: 1400px;
+                         height: 1500px;
+                         box-shadow: 0px 0px 20px 8px rgb(176, 46, 12);
+                         background-color: rgb(35, 37, 35);
+                         background-repeat: no-repeat;
+                         background-position: center;
+                     }
+                     
+                     hr {
+                         border-top: 2px solid black;
+                     }
+                     
+                     .container_nav {
+                         box-shadow: 10px 2px 8px black;
+                     }
+                     
+                     .container_bottom_nav {
+                         box-shadow: 10px 2px 8px black;
+                     }
+                     
+                     .intro {
+                         text-align: center;
+                     }
+                     
+                     .footer_nav {
+                         box-shadow: 10px -2px 8px black;
+                     }
+                     
+                     .banner_container {
+                         margin-top: 0;
+                     }
+                     
+                     .button_login {
+                         background-color: none;
+                         font-weight: 700;
+                     }
+                     
+                     .nav-item {
+                         outline: 1px;
+                         color: black;
+                         font-weight: 700;
+                         transition: all 0.25s;
+                         height: 3em;
+                         text-align: center;
+                     }
+                     
+                     .navbar-nav .nav-item.active .nav-link,
+                     .navbar-nav .nav-item:hover .nav-link {
+                         color: rgb(176, 46, 12);
+                         cursor: pointer;
+                     }
+                     
+                     .navbar-nav .nav-item.active .nav-link,
+                     .navbar-nav .nav-item:focus a.is-featured {
+                         color: rgb(176, 46, 12);
+                     }
+                     
+                     .page_content_1 {
+                         background-repeat: no-repeat;
+                         background-position: center;
+                         height: 100px;
+                     }
+                     
+                     .page_content_2 {
+                         color: white;
+                     }
+                     
+                     .container_info {
+                         margin-right: 0;
+                     }
+                     
+                     .raiders {
+                         text-align: center;
+                     }
+                     /* EXPANSION NAV */
+                     
+                     .navbar-expansions {
+                         background-color: rgb(41, 41, 41);
+                         overflow: hidden;
+                     }
+                     
+                     .navbar-expansions a {
+                         color: rgb(255, 255, 255);
+                         border: 1px black solid;
+                         text-transform: uppercase;
+                         font-size: 13px;
+                         font-weight: 800;
+                         padding: 15px 10px;
+                         height: 70px;
+                         text-align: center;
+                         width: 25%;
+                         /* Four links of equal widths */
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                     }
+                     
+                     .navbar-expansions a:hover {
+                         color: rgb(176, 46, 12);
+                     }
+                     
+                     .navbar-expansions a.is-featured:focus {
+                         color: rgb(176, 46, 12);
+                         border-bottom: 2px solid rgb(176, 46, 12);
+                     }
+                     /* EXPANSION NAV ENDS*/
+                     
+                     .wf-header-block {
+                         height: 70px;
+                         display: flex;
+                         justify-content: space-around;
+                     }
+                     
+                     .wf-tabs {
+                         color: rgb(176, 46, 12);
+                         padding: 15px 35px;
+                         font-weight: 700;
+                         text-decoration: none;
+                         margin: 25px 0;
+                         transition: background-color 200ms ease-in-out;
+                         margin: 5px;
+                     }
+                     
+                     .wf-tabs li a {
+                         color: black;
+                         border: 1px solid;
+                         text-transform: uppercase;
+                         font-size: 13px;
+                         padding: 15px 15px;
+                         line-height: 1.1;
+                         height: 70px;
+                         vertical-align: middle;
+                         display: table-cell;
+                         flex-wrap: nowrap;
+                         display: inline-block;
+                     }
+                     
+                     ul li a.exp-link {
+                         color: red;
+                         border: 1px solid black;
+                         width: 100%;
+                         margin: 5px;
+                         text-decoration: none;
+                     }
+                     
+                     .expansion_banner {
+                         max-width: 900px;
+                         box-shadow: 0 0 12px black;
+                         padding: 0;
+                     }
+                     /*expansion banner*/
+                     /*Application checkbox coloring*/
+                     
+                     [type=checkbox]:checked+label:before {
+                         border-right: 2px solid rgb(176, 46, 12);
+                         border-bottom: 2px solid rgb(176, 46, 12);
+                     }
+                     
+                     .styledCheck {}
