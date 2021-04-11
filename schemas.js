@@ -26,15 +26,12 @@ const Joi = BaseJoi.extend(extension)
 module.exports.applicationSchema = Joi.object({
     application: Joi.object({
         playstyle: Joi.string().required().escapeHTML(),
-
-    }).required(),
-    deleteImages: Joi.array()
+    }).required()
 });
 
 
-module.exports.reviewSchema = Joi.object({
-    review: Joi.object({
-        rating: Joi.number().required().min(1).max(5),
+module.exports.commentSchema = Joi.object({
+    comments: Joi.object({
         body: Joi.string().required().escapeHTML()
     }).required()
 

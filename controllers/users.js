@@ -14,7 +14,7 @@ module.exports.register = async(req, res, next) => {
         console.log(user);
         req.login(registeredUser, err => {
             if (err) return next(err);
-            req.flash('success', `Welcome to Horna ${currentUser}!`);
+            req.flash('success', `Welcome to Horna ${user.username}!`);
             res.redirect('/');
         })
     } catch (e) {

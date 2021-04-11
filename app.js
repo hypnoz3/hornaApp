@@ -17,6 +17,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
 const userRoutes = require('./routes/users');
 const applicationRoutes = require('./routes/application');
+const commentRoutes = require('./routes/comments');
 const expansionRoutes = require('./routes/expansion');
 const raidRoutes = require('./routes/raid');
 
@@ -153,6 +154,7 @@ app.use((req, res, next) => {
 
 app.use('/', userRoutes);
 app.use('/applications', applicationRoutes);
+app.use('/applications/:id/comments', commentRoutes);
 app.use('/expansions', expansionRoutes);
 app.use('/raids', raidRoutes);
 

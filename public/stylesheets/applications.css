@@ -1,11 +1,102 @@
-    #applicationsMenu a {
-        display: block;
-        padding: 3px;
+    a.is-featured {
         text-decoration: none;
-        font-weight: 900;
+        font-weight: 700;
+        text-transform: uppercase;
     }
     
-    #applicationsMenu a.is-featured:focus {
+    div.#applicationsMenu {
         color: rgb(176, 46, 12);
         box-shadow: 0px 0px 5px 5px rgb(176, 46, 12);
+        text-decoration: none;
+    }
+    
+    .avatar {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        object-fit: scale-down;
+    }
+    /* Hakemus */
+    
+    .hakemus {
+        border-left: 2px solid rgb(176, 46, 12);
+        border-right: 2px solid rgb(176, 46, 12);
+    }
+    
+    .hakemus span {
+        font-weight: 700;
+    }
+    /* Comments */
+    
+    .comments {
+        border-top: 2px solid rgb(176, 46, 12);
+    }
+    
+    .applicant_comments {
+        border-bottom: 2px solid rgb(176, 46, 12);
+        background-color: rgb(17, 17, 17);
+    }
+    
+    .applicant_comments a {
+        text-decoration: none;
+        font-weight: 700;
+        color: darkgrey;
+        text-transform: uppercase;
+    }
+    
+    .comment_textarea {
+        background-color: black;
+        border: 1px solid rgb(176, 46, 12)
+    }
+    
+    .comment_textarea:focus,
+    input:focus,
+    .uneditable-input:focus {
+        background-color: black;
+        border-color: rgb(176, 46, 12, 0.8) !important;
+        box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(176, 46, 12, 0.6) !important;
+        outline: 0 none !important;
+    }
+    
+    .comment_button {
+        border-color: rgb(176, 46, 12);
+        background-color: rgb(176, 46, 12);
+    }
+    
+    .comment_button {
+        display: block;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        -webkit-text-stroke: 1px black;
+        background-color: rgb(176, 46, 12);
+        border: none;
+    }
+    
+    .comment_button:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.4);
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+    }
+    
+    .comment_button:hover:after {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .comment_button:hover {
+        background-color: rgb(176, 46, 12);
     }

@@ -7,12 +7,10 @@ module.exports.index = async(req, res, next) => {
 }
 
 module.exports.renderNewForm = (req, res) => {
-    console.log('test');
     res.render('applications/new');
 }
 
 module.exports.createApplication = async(req, res, next) => {
-    console.log('test');
     const application = new Application(req.body.application);
     application.author = req.user._id;
     await application.save();
@@ -22,7 +20,12 @@ module.exports.createApplication = async(req, res, next) => {
 }
 
 module.exports.showApplication = async(req, res) => {
-    const application = await Application.findById(req.params.id).populate('author');
+    const application = await Application.findById(req.params.id).populate({
+        path: 'comments',
+        populate: {
+            path: 'author'
+        }
+    }).populate('author');
     const applications = await Application.find({}).populate('author');
     if (!application) {
         req.flash('error', 'Cannot find that application!');

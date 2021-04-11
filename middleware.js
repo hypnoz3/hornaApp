@@ -1,5 +1,5 @@
 const ExpressError = require('./utils/ExpressError');
-const { applicationSchema } = require('./schemas.js');
+const { applicationSchema, commentSchema } = require('./schemas.js');
 const Application = require('./models/application');
 
 module.exports.isLoggedIn = (req, res, next) => {
@@ -14,16 +14,26 @@ module.exports.isLoggedIn = (req, res, next) => {
 
 module.exports.isAuthor = async(req, res, next) => {
     const { id } = req.params;
-    const campground = await Campground.findById(id)
-    if (!campground.author.equals(req.user._id)) {
+    const application = await Application.findById(id)
+    if (!application.author.equals(req.user._id)) {
         req.flash('error', 'You dont have permission to do that!');
-        return res.redirect(`/campgrounds/${campground._id}`)
+        return res.redirect(`/applications/${application._id}`)
+    }
+    next();
+}
+
+module.exports.isCommentAuthor = async(req, res, next) => {
+    const { id, commentId } = req.params;
+    const comment = await Comment.findById(commentId);
+    if (!comment.author.equals(req.user._id)) {
+        req.flash('error', 'You dont have permission to do that!');
+        return res.redirect(`/applications/${id}`)
     }
     next();
 }
 
 module.exports.validateApplication = (req, res, next) => {
-    const { error } = ApplicationSchema.validate(req.body);
+    const { error } = applicationSchema.validate(req.body);
     console.log(req.body);
     if (error) {
         const msg = error.details.map(el => el.message).join(',')
@@ -59,3 +69,13 @@ module.exports.checkProfileOwnership = async(req, res, next) => {
         res.redirect('back');
     };
 };
+
+module.exports.validateComment = (req, res, next) => {
+    const { error } = commentSchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(el => el.message).join(',')
+        throw new ExpressError(msg, 400)
+    } else {
+        next();
+    }
+}

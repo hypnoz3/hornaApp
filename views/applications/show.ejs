@@ -1,67 +1,103 @@
 <% layout('layouts/boilerplate') %>
     <link rel="stylesheet" href="/stylesheets/applications.css">
     <div class="row align-items-start">
-        <div class="col-2 pe-3">
+        <div class="col-3 pe-3">
             <% for (let application of applications) { %>
-                <a href="/applications/<%=application._id %> " class="text-white is-featured">
+                <a href="/applications/<%=application._id %>" class="text-white is-featured" style="text-decoration: none;">
                     <div class="card shadow bg-dark mb-3 me-3" id="applicationsMenu">
-                        <span class="text-white">HAKEMUS</span>
-                        <a class="text-white">
+                        <p class="text-white text-center">HAKEMUS</p>
+                        <p class="text-white">
                             <%= application.author.username %>
-                        </a>
-                        <div class="container_nav_picture" style="max-height: 32px;">
+                        </p>
+                        <!-- <div class="avatar" style="max-height: 32px;">
                             <% application.author.avatar.forEach((ava, i) => { %>
                                 <img class="avatar-img w-100" style="max-width: 32px; max-height: 32px; border-radius: 50%;" src="<%= ava.url %>" alt="...">
                                 <% }) %>
+                        </div> -->
+                        <div class="text-white float-end">
+                            <em class="float-end">
+                                <%= moment(application.createdAt).format('dddd, MMMM Do YYYY') %>
+                            </em>
                         </div>
                     </div>
                 </a>
 
                 <% } %>
         </div>
-        <div class=" bg-dark mb-3 text-white col-8">
-            <h1 class="text-center mb-3">HAKEMUS</h1>
+        <div class="hakemus bg-dark mb-3 p-0 text-white col-7">
+            <h1 class="text-center mb-3 mt-3">HAKEMUS</h1>
+            <div class="float-end me-2">
+                <em>Submitted by: <%= application.author.username %> </em>
+            </div>
             <div class="card-body">
-                <h5>Mistä osa-alueesta wowissa olet kiinnostunut?</h5>
+                <span>Mistä osa-alueesta wowissa olet kiinnostunut?</span>
                 <p class="card-text">
                     <%= application.playstyle %>
                 </p>
                 <hr>
-                <h5>Millaista roolia pelaat mieluiten?</h5>
+                <span>Millaista roolia pelaat mieluiten?</span>
                 <p class="card-text">
-                    <%= application.role1, application.role2, application.role3 %>
+                    <%= application.role1 || application.role2 || application.role3%>
                 </p>
                 <hr>
-                <h5>Haluaisimme tietää millainen ihminen hahmon takaa löytyy, joten kerro tarinaa itsestäsi?</h5>
+                <span>Haluaisimme tietää millainen ihminen hahmon takaa löytyy, joten kerro tarinaa itsestäsi?</span>
                 <p class="card-text">
                     <%= application.q1 %>
                 </p>
                 <hr>
-                <h5>Millaista kokemusta sinulla on raidaamisesta?</h5>
-                <p class="card-text">
-                    <%= application.q2 %>
-                </p>
-                <hr>
-                <h5>Jos olet kiinnostunut raidaamisesta kanssamme, miten paljon haluat / kykenet raideihimme osallistumaan? Raidiaikamme ovat keskiviikkona, torstaina ja sunnuntaina 19.30-22.30</h5>
-                <p class="card-text">
-                    <%= application.q3 %>
-                </p>
-                <hr>
-                <h5>Miksi haluat liittyä Hornaan? Odotuksesi killalta?</h5>
-                <p class="card-text">
-                    <%= application.q4 %>
-                </p>
-                <hr>
-                <h5>Tunnetko ketään Hornasta ennestään? Kenet ja mistä tunnette toisenne?</h5>
-                <p class="card-text">
-                    <%= application.q5 %>
-                </p>
-                <hr>
-                <h5>Hienoa, kiitos hakemuksestasi ja ole hyvä, saat viimeisen sanan.. </h5>
-                <p class="card-text">
-                    <%= application.q6 %>
-                </p>
+                <% if (application.playstyle == "Raid") {%>
+                    <span>Millaista kokemusta sinulla on raidaamisesta?</span>
+                    <p class="card-text">
+                        <%= application.q2 %>
+                    </p>
+                    <hr>
+                    <span>Jos olet kiinnostunut raidaamisesta kanssamme, miten paljon haluat / kykenet raideihimme osallistumaan? Raidiaikamme ovat keskiviikkona, torstaina ja sunnuntaina 19.30-22.30</span>
+                    <p class="card-text">
+                        <%= application.q3 %>
+                    </p>
+                    <hr>
+                    <% } %>
+                        <span>Miksi haluat liittyä Hornaan? Odotuksesi killalta?</span>
+                        <p class="card-text">
+                            <%= application.q4 %>
+                        </p>
+                        <hr>
+                        <span>Tunnetko ketään Hornasta ennestään? Kenet ja mistä tunnette toisenne?</span>
+                        <p class="card-text">
+                            <%= application.q5 %>
+                        </p>
+                        <hr>
+                        <span>Hienoa, kiitos hakemuksestasi ja ole hyvä, saat viimeisen sanan.. </span>
+                        <p class="card-text mb-3">
+                            <%= application.q6 %>
+                        </p>
             </div>
+            <div class="comments p-0">
+                <div class="applicant_comments text-center mb-3">
+                    <a href="">Application comments</a>
+                </div>
+                <% for (let comment of application.comments){ %>
+                    <div class="mt-3 mx-2 text-white">
+                        <span>
+                            <%=comment.author.username %>:
+                                <%=comment.body %>
+                        </span>
+                        <hr>
+                    </div>
+                    <% } %>
+                        <% if(currentUser){ %>
+                            <form action="/applications/<%=application._id%>/comments" method="POST" class="mb-3 validated-form" novalidate>
 
+                                <div class="mb-3 mx-2">
+                                    <textarea class="comment_textarea form-control text-white" name="comment[body]" id="body" cols="15" rows="2" placeholder="Kommentoi..." required></textarea>
+                                    <div class="valid-feedback">
+                                        Looks Good!
+                                    </div>
+                                </div>
+                                <button class="comment_button btn btn-success ms-2">Post comment</button>
+                            </form>
+                            <% } %>
+
+            </div>
         </div>
     </div>

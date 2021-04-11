@@ -6,11 +6,16 @@ const BannerSchema = new Schema({
     filename: String
 });
 
+const ExpansionSchema = new Schema({
+    title: String
+});
+
 const RaidSchema = new Schema({
     title: String,
     releaseDate: Date,
     expansion_id: String,
     banner: [BannerSchema],
+    expansion: [ExpansionSchema]
 });
 
 module.exports = mongoose.model('Raid', RaidSchema);

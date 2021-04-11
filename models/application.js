@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const moment = require('moment');
+const Comment = require('./comment');
 const Schema = mongoose.Schema;
 
 const ApplicationSchema = new Schema({
@@ -13,6 +14,10 @@ const ApplicationSchema = new Schema({
     q4: String,
     q5: String,
     q6: String,
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Comment'
+    }],
     createdAt: {
         type: Date,
         default: Date.now()
@@ -22,6 +27,16 @@ const ApplicationSchema = new Schema({
         ref: 'User'
     },
 });
+
+ApplicationSchema.post('findOneAndDelete', async function(doc) {
+    if (doc) {
+        await Comment.deleteMany({
+            _id: {
+                $in: doc.comments
+            }
+        })
+    }
+})
 
 
 module.exports = mongoose.model('Application', ApplicationSchema);
