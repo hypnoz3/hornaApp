@@ -1,8 +1,8 @@
 <% layout('layouts/boilerplate') %>
-    <div class="container d-flex justify-content-center align-items-center mb-5">
+    <div class="edit_form d-flex justify-content-center align-items-center mb-5">
         <div class="row">
             <div class="col-12">
-                <div class="card shadow">
+                <div class="card shadow bg-dark text-white">
 
                     <div class="card-body">
                         <h5 class="card-title text-center">Update your profile</h5>
@@ -58,12 +58,12 @@
                                     <% })%>
                             </div>
                             <div class="mb-3">
-                                <button class="btn btn-success w-100 ">Update</button>
+                                <button class="ripple orange w-100 ">Update</button>
                             </div>
                         </form>
                         <div class="mb-3">
                             <form class="d-inline" action="/users/<%= user._id %>?_method=DELETE" method="POST">
-                                <button class="btn btn-danger w-100" onclick="return confirm('Are you sure you want to delete your user account?');">Delete Account?</button>
+                                <button class="ripple red w-100" onclick="return confirm('Are you sure you want to delete your user account?');">Delete Account?</button>
                             </form>
                         </div>
                     </div>

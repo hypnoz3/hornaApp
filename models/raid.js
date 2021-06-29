@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
 const BannerSchema = new Schema({
     url: String,
     filename: String
@@ -15,7 +16,7 @@ const RaidSchema = new Schema({
     releaseDate: Date,
     expansion_id: String,
     banner: [BannerSchema],
-    expansion: [ExpansionSchema]
+
 });
 
 module.exports = mongoose.model('Raid', RaidSchema);

@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+input.form-control,
+textarea.form-control,
+select.form-select {
+  background-color: black;
+  border: 1px solid rgb(176, 46, 12);
+  color: white;
+}
+
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus,
+input:focus,
+.uneditable-input:focus {
+  background-color: black;
+  border-color: rgb(176, 46, 12, 0.8) !important;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+    0 0 8px rgba(176, 46, 12, 0.6) !important;
+  outline: 0 none !important;
+  color: white;
+}
+
+.dropdown-menu > .active > a {
+  color: black;
+  background-color: rgb(176, 46, 12);
+}
+
+.dropdown-menu > .active > a:focus {
+  color: black;
+  background-color: rgb(176, 46, 12);
+}
+
+.dropdown-menu > .active > a:hover {
+  color: black;
+  background-color: rgb(176, 46, 12);
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  filter: hue-rotate(140deg);
+}
+
+/* Buttons Ripple Effect /*/
+
+button.orange {
+  background-color: rgb(176, 46, 12);
+  color: #fff;
+  border: 1px rgb(176, 46, 12) solid;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+a.orange {
+  background-color: rgb(176, 46, 12);
+  color: #fff;
+  border: 1px rgb(176, 46, 12) solid;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+  text-decoration: none;
+}
+
+button.red {
+  background-color: rgb(209, 26, 42);
+  color: #fff;
+  border: 1px rgb(209, 26, 42) solid;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+  pointer-events: none;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+button.ripple:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+button.ripple:hover:after {
+  width: 150%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+/*/ ripple effect ends /*/
+
+.recruitment_container {
+  height: 150px;
+}
+
+/*/ RECRUITMENT PICTURES */
+
+.recruitment_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.classes {
+  position: relative;
+  margin-right: 20px;
+}
+
+.classicon {
+  height: 150px;
+}
+
+img.role {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}

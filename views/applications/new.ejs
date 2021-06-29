@@ -8,28 +8,28 @@
                     <div class="mb-3">
                         <p>Mistä osa-alueesta wowissa olet kiinnostunut?</p>
                         <select class="form-select w-auto" aria-label="" id="playstyle" name="application[playstyle]" onchange="playstyleSelection()" required>
-                            <option selected value="valitse">Valitse</option>
+                            <option selected value="">Valitse</option>
                             <option value="Social" id="social">Social</option>
                             <option value="Raid" id="raid">Raid</option>
                           </select>
                     </div>
                     <hr>
-                    <div class="mb-3" multiple>
+                    <div class="mb-3 btn-group-vertical" multiple required>
                         <p>Millaista roolia pelaat mieluiten?(voit valita useamman vaihtoehdon)</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="DPS" id="role1" name="application[role1]">
+                            <input class="form-check-input roundedTwo" type="checkbox" value="DPS" id="role1" name="application[role1]">
                             <label class="form-check-label" for="role1">
                               DPS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Tank" id="role2" name="application[role2]">
+                            <input class="form-check-input roundedTwo" type="checkbox" value="Tank" id="role2" name="application[role2]">
                             <label class="form-check-label" for="role2">
                               Tank
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Healer" id="role3" name="applcation[role2]">
+                            <input class="form-check-input roundedTwo" type="checkbox" value="Healer" id="role3" name="applcation[role2]">
                             <label class="form-check-label" for="role3">
                               Healer
                             </label>
@@ -89,15 +89,16 @@
                         Looks Good!
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-success">Send Application</button>
+                        <button class="ripple orange">Send Application</button>
                     </div>
 
                 </form>
-                <a href="/">Back</a>
+                <a class="mb-3" href="/">Back</a>
             </div>
         </div>
     </div>
 
+    
     <script>
         function playstyleSelection() {
             //if raid -selected
