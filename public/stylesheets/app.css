@@ -8,6 +8,7 @@ select.form-select {
   background-color: black;
   border: 1px solid rgb(176, 46, 12);
   color: white;
+  border-radius: 0;
 }
 
 input.form-control:focus,
@@ -39,8 +40,10 @@ input:focus,
 }
 
 input[type='checkbox'],
-input[type='radio'] {
-  filter: hue-rotate(140deg);
+input[type='checkbox']:checked {
+  border: 0;
+  outline: 1px solid rgb(176, 46, 12);
+  outline-offset: -1px;
 }
 
 /* Buttons Ripple Effect /*/

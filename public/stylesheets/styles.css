@@ -4,15 +4,10 @@ body {
 
 .container {
   width: 1400px;
-  height: 1500px;
   box-shadow: 0px 0px 50px 5px rgb(176, 46, 12);
   background-color: rgb(35, 37, 35);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-hr {
-  border-top: 2px solid black;
 }
 
 .container_nav {
@@ -55,8 +50,7 @@ hr {
   cursor: pointer;
 }
 
-.navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:focus a.is-featured {
+.nav-link:focus {
   color: rgb(176, 46, 12);
 }
 
@@ -68,10 +62,6 @@ hr {
 
 .page_content_2 {
   color: white;
-}
-
-.container_info {
-  margin-right: 0;
 }
 
 .raiders {
@@ -151,7 +141,6 @@ ul li a.exp-link {
 .expansion_banner {
   max-width: 900px;
   box-shadow: 0 0 12px black;
-  padding: 0;
 }
 /*expansion banner*/
 /*Application checkbox coloring*/
