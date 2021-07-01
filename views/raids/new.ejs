@@ -23,10 +23,10 @@
                         <label class="form-label" for="raid[expansion.title]">Select expansion</label>
                         <select class="form-select" aria-label="Default select example" name="raid[expansion.title]" id="expansion" required>
                             <option selected>Select</option>
-                            <option value="wod">Warlord Of Draenor</option>
-                            <option value="legion">Legion</option>
-                            <option value="bfa">Battle for Azeroth</option>
-                            <option value="sl">Shadowlands</option>
+                            <% for(let expansion of expansions) { %> 
+                            <option value="wod"><%= expansion.title %></option>
+                           
+                          <%  } %>
                           </select>
                         <div class="valid-feedback">
                             Looks Good!

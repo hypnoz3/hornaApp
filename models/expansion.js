@@ -10,7 +10,7 @@ const ExpansionSchema = new Schema({
     title: String,
     releaseDate: Date,
     banner: [BannerSchema],
-    raid: [{
+    raids: [{
         type: Schema.Types.ObjectId,
         ref: 'Raid'
     }]

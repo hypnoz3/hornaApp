@@ -51,13 +51,12 @@ hr {
 }
 
 .navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:hover .nav-link {
+.navbar-nav .nav-item:hover {
   color: rgb(176, 46, 12);
   cursor: pointer;
 }
 
-.navbar-nav .nav-item.active .nav-link,
-.navbar-nav .nav-item:focus a.is-featured {
+.navbar-nav .nav-item a.is-featured:focus {
   color: rgb(176, 46, 12);
 }
 
@@ -67,28 +66,8 @@ hr {
   height: 100px;
 }
 
-.expansion_container {
-  margin-left: 10px;
-  border-left: 2px solid rgb(176, 46, 12);
-  color: white;
-}
-
 h2 {
   font-size: 1.4rem;
-}
-
-.first_raid {
-  margin-top: 300px;
-}
-
-.raid_banner {
-  max-width: 600px;
-  float: right;
-  box-shadow: 0 0 12px black;
-}
-
-.expansion_banner {
-  float: right;
 }
 
 .raiders {
@@ -106,7 +85,7 @@ h2 {
   border: 1px black solid;
   text-transform: uppercase;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 15px 10px;
   height: 70px;
   text-align: center;
@@ -127,36 +106,6 @@ h2 {
 }
 /* EXPANSION NAV ENDS*/
 
-.wf-header-block {
-  height: 70px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.wf-tabs {
-  color: rgb(176, 46, 12);
-  padding: 15px 35px;
-  font-weight: 700;
-  text-decoration: none;
-  margin: 25px 0;
-  transition: background-color 200ms ease-in-out;
-  margin: 5px;
-}
-
-.wf-tabs li a {
-  color: black;
-  border: 1px solid;
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 15px 15px;
-  line-height: 1.1;
-  height: 70px;
-  vertical-align: middle;
-  display: table-cell;
-  flex-wrap: nowrap;
-  display: inline-block;
-}
-
 ul li a.exp-link {
   color: red;
   border: 1px solid black;
@@ -165,18 +114,79 @@ ul li a.exp-link {
   text-decoration: none;
 }
 
+/* EXPANSION */
+
+.expansion_container {
+  margin-left: 10px;
+  border-left: 2px solid rgb(176, 46, 12);
+  color: white;
+}
 .expansion_banner {
   max-width: 900px;
   box-shadow: 0 0 12px black;
+  float: right;
 }
-/*expansion banner*/
-
-.raid_info {
+.expansion_info {
   margin-left: auto;
+  font-weight: bold;
   top: 50%;
   bottom: 50%;
   align-items: center;
   position: relative;
+}
+
+.expansion_info h2 {
+  font-weight: bold;
+}
+
+span.expansion_releaseDate {
+  font-weight: bold;
+}
+
+/*EXPANSION ENDS*/
+
+/* RAID */
+
+.banner {
+  display: flex;
+  margin-left: 0;
+  order: 3;
+}
+
+.raid_banner {
+  max-width: 600px;
+  box-shadow: 0 0 12px black;
+  justify-content: flex-end;
+}
+
+.raid {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.progress_table {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 50px;
+  font-size: 15px;
+}
+.raid_info {
+  margin-left: 0;
+  top: 50%;
+  bottom: 50%;
+  align-items: center;
+  position: relative;
+}
+
+.raid_info h2 {
+  font-weight: bold;
+}
+
+.raid_releaseDate {
+  font-weight: bold;
 }
 
 .timeline_indicator {
@@ -188,10 +198,19 @@ ul li a.exp-link {
   margin-left: -20px;
 }
 
-.expansion_info {
-  margin-left: auto;
-  top: 50%;
-  bottom: 50%;
-  align-items: center;
-  position: relative;
+td,
+th {
+  padding: 5px;
+}
+
+td {
+  font-weight: 600;
+}
+
+.progress_table td:last-child {
+  text-align: end;
+}
+
+thead {
+  border-bottom: 1px solid rgb(176, 46, 12);
 }

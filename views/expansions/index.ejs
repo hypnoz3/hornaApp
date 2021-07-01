@@ -27,7 +27,7 @@
                         <div class="timeline_indicator">
                             <span class="">-</span>
                             </div>
-                        <span><%= expansion.releaseDate.toDateString()  %></span>
+                        <span class="expansion_releaseDate"><%= expansion.releaseDate.toLocaleString('fi-FI', { day: '2-digit', month: '2-digit', year: 'numeric'})  %></span>
                 </div> 
             <div class="expansion-image">
                 <img class="expansion_banner" id="expansion-banner" src="<%= expansion.banner[0].url %>" alt=" ">
@@ -37,13 +37,34 @@
             <div class="container_info">
                 <div class="raids mb-3 row d-flex justify-content-center">
                     <% for(let raid of raids) {%> 
-                    <div class="raid ms-auto mb-3">
+                    <div class="raid mb-3">
                         <div class="raid_info">
                         <h2 class="raid_title"><%= raid.title  %> </h2>
                         <div class="timeline_indicator">                     
                         </div>  
-                        <span class="raid_releaseDate"><%= raid.releaseDate.toDateString()  %> </span>
+                        <span class="raid_releaseDate"><%= raid.releaseDate.toLocaleString('fi-FI', { day: '2-digit', month: '2-digit', year: 'numeric'})  %> </span>
                     </div>  
+                    <div class="progress_table">
+                        <table>
+                            <thead>
+                            <th>Boss</th>
+                            <th>Kill Date</th>
+                            <th>Difficulty</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Sire Denathrius</td>
+                            <td>23.11.2020</td>
+                            <td>Mythic</td>
+                        </tr>
+                        <tr>
+                            <td>Shirekwing</td>
+                            <td>23.11.2020</td>
+                            <td>Mythic</td>
+                        </tr>
+                    </tbody>
+                        </table>
+                    </div>
                         <div class="banner">
                         <img class="raid_banner" src="<%= raid.banner[0].url  %> " alt=" ">
                         </div>
