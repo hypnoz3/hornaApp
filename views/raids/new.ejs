@@ -21,10 +21,10 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="raid[expansion.title]">Select expansion</label>
-                        <select class="form-select" aria-label="Default select example" name="raid[expansion.title]" id="expansion" required>
+                        <select class="form-select" aria-label="Default select example" name="expansion" id="expansion" required>
                             <option selected>Select</option>
                             <% for(let expansion of expansions) { %> 
-                            <option value="wod"><%= expansion.title %></option>
+                            <option value="<%= expansion.id %>"><%= expansion.title %></option>
                            
                           <%  } %>
                           </select>

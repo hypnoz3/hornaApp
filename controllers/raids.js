@@ -13,7 +13,7 @@ module.exports.renderNewForm = async(req, res) => {
 }
 
 module.exports.createRaid = async(req, res, next) => {
-    const expansion = await Expansion.findById(req.params.id == selection.id)
+    const expansion = await Expansion.findById(req.body.expansion)
     const raid = new Raid(req.body.raid);
     raid.banner = req.files.map(f => ({ url: f.path, filename: f.filename }));
     expansion.raids.push(raid);
