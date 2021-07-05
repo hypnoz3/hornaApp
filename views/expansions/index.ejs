@@ -1,8 +1,10 @@
 <% layout('layouts/boilerplate') %>
     <link rel="stylesheet" href="/stylesheets/raiding.css">
+    <link href="/javascripts/sorting.js">
 
     <div class="page_content_2">
         <div class="wf-header-block">
+            
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"></a>
@@ -10,7 +12,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
                     <div class="navbar-expansions collapse navbar-collapse row d-flex justify-content-center navbar-expansions">
-                        <a href="#" id="wod_box" class="nav-item nav-link is-featured" onclick="changeBanner('https://res.cloudinary.com/amroeg/image/upload/v1616082225/Horna/wod_banner_ldqlpm.png');">Warlords of Draenor</a>
+                        <a href="#" id="wod_box" class="nav-item nav-link is-featured" >Warlords of Draenor</a>
                         <a href="#" id="legion_box" class=" nav-item nav-link is-featured" onclick="changeBanner('https://res.cloudinary.com/amroeg/image/upload/v1616082220/Horna/legion_banner_q84ngk.png');">Legion</a>
                         <a href="# " id="bfa_box " class=" nav-item nav-link is-featured " onclick="changeBanner('https://res.cloudinary.com/amroeg/image/upload/v1616082216/Horna/bfa_banner_tv7e5s.png'); ">Battle For Azeroth</a>
                         <a href="# " id="SL_box " class=" nav-item nav-link is-featured " onclick="changeBanner('https://res.cloudinary.com/amroeg/image/upload/v1616082223/Horna/SL_banner_em7n4i.png'); ">Shadowlands</a>
@@ -18,7 +20,10 @@
                 </div>
             </nav>
         </div>
-
+        <div class="ms-3">
+            <a class="orange ripple" href="/expansions/new">New Expansion</a>
+            <a class="orange ripple" href="/raids/new">New Raid</a>
+        </div>
         <div class="expansion_container mb-5 ms-auto row d-flex justify-content-center ">
             <% for(let expansion of expansions) { %>
                 <div class="expansion ms-auto">
@@ -33,10 +38,12 @@
                 <img class="expansion_banner" id="expansion-banner" src="<%= expansion.banner[0].url %>" alt=" ">
             </div>
         </div>
-            <%  }%> 
+       
             <div class="container_info">
                 <div class="raids mb-3 row d-flex justify-content-center">
-                    <% for(let raid of raids) {%> 
+                     
+                    <%  for(let raid of expansion.raids) {%>
+                        
                     <div class="raid mb-3">
                         <div class="raid_info">
                         <h2 class="raid_title"><%= raid.title  %> </h2>
@@ -69,9 +76,10 @@
                         <img class="raid_banner" src="<%= raid.banner[0].url  %> " alt=" ">
                         </div>
                     </div>  
-                    <% } %> 
+                    <%  }%>
                 </div>
             </div>
+            <% } %>
         </div>
     </div>
 
