@@ -56,8 +56,8 @@ button.orange {
   background-color: rgb(176, 46, 12);
   color: #fff;
   border: 1px rgb(176, 46, 12) solid;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 15px 25px;
@@ -172,3 +172,54 @@ img.role {
   right: 10%;
   bottom: 10%;
 }
+
+/* .nav-area a {
+  text-transform: uppercase;
+}
+.nav-area {
+  background: rgb(33, 37, 41);
+  overflow-y: auto;
+  max-height: calc(100vh - 4.5em);
+}
+.nav-area::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.nav-area ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-area > ul > li {
+  float: right;
+  position: relative;
+}
+.nav-area ul ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 20px;
+  display: block;
+}
+.nav-area ul li:hover a {
+  background: rgb(176, 46, 12);
+}
+
+.nav-area ul ul li {
+  position: absolute;
+  padding: 0;
+  min-width: 100px;
+
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+}
+.nav-area ul li:hover {
+  display: block;
+}
+.nav-area ul ul li:hover a {
+  background: rgb(176, 46, 12);
+}
+.nav-area ul ul li {
+  position: relative;
+} */

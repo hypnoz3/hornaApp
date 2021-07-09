@@ -1,19 +1,13 @@
 body {
   background: rgb(20, 17, 17);
-  /* background: radial-gradient(circle, rgba(176, 46, 12, 1) 0%, rgba(0, 0, 0, 1) 65%); */
 }
 
 .container bg-dark {
   width: 1400px;
-
   box-shadow: 0px 0px 20px 8px rgb(176, 46, 12);
   background-color: rgb(35, 37, 35);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-hr {
-  border-top: 2px solid black;
 }
 
 .container_nav {
@@ -78,11 +72,12 @@ h2 {
 .navbar-expansions {
   background-color: rgb(41, 41, 41);
   overflow: hidden;
+  border: 2px solid rgb(25, 28, 31);
 }
 
 .navbar-expansions a {
   color: rgb(255, 255, 255);
-  border: 1px black solid;
+  border-left: 2px solid rgb(25, 28, 31);
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
@@ -96,8 +91,14 @@ h2 {
   align-items: center;
 }
 
+.navbar-expansions a:nth-of-type(1) {
+  border-left: none;
+}
+
 .navbar-expansions a:hover {
   color: rgb(176, 46, 12);
+  border-bottom: 2px solid rgb(176, 46, 12);
+  transform: none;
 }
 
 .navbar-expansions a.is-featured:focus {
@@ -193,7 +194,7 @@ span.expansion_releaseDate {
   background-color: rgb(176, 46, 12);
   height: 10px;
   width: 15px;
-  outline: solid 5px rgb(35, 37, 35);
+  outline: solid 5px rgb(33, 37, 41);
   border-radius: 50px;
   margin-left: -20px;
 }

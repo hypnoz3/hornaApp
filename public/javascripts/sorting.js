@@ -1,10 +1,20 @@
 const Expansion = require('../models/expansion');
-const Raid = require('../models/raid');
-const wodButton = document.getElementById('#wod_box');
-const expansionContainer = document.getElementById('expansion_container');
+const wodButton = document.getElementById('wod_box');
+const sortButton = document.getElementById('sort')
 
-wodButton.addEventListener('click', () => {
-    await Expansion.find({_id: "60def7d0663e912c30889433"}).populate('raids').sort('releaseDate');
+
+
+
+sortButton.addEventListener('click', () => {
+ expansionSearch() 
+})
+
+const expansionSearch = Expansion.find({_id: "60dc58717404dd38d85c4307"}, (error, data) => {
+    if(error) {
+        console.log(error)
+    }else {
+        console.log(data)
+    }
 })
 
 

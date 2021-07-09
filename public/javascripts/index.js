@@ -1,8 +1,8 @@
 
-function changeBanner(banner) {
-    $('#expansion-banner').attr('src', banner);
-    document.querySelector('#expansion-banner').src = banner;
-}
+// function changeBanner(banner) {
+//     $('#expansion-banner').attr('src', banner);
+//     document.querySelector('#expansion-banner').src = banner;
+// }
 
 // Button Ripple Effect//
 

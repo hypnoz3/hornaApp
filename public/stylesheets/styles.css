@@ -2,16 +2,20 @@ body {
   background: rgb(20, 17, 17);
 }
 
-.container {
+.container-xxl {
   width: 1400px;
+  height: 2000px;
   box-shadow: 0px 0px 50px 5px rgb(176, 46, 12);
   background-color: rgb(35, 37, 35);
   background-repeat: no-repeat;
-  background-position: center;
+}
+
+hr {
+  border-top: 2px solid black;
 }
 
 .container_nav {
-  box-shadow: 10px 2px 8px black;
+  box-shadow: 30px 2px 8px black;
 }
 
 .container_bottom_nav {
@@ -35,6 +39,16 @@ body {
   font-weight: 700;
 }
 
+.raid_creation h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.raid_creation button {
+  align-items: center;
+}
+
 .nav-item {
   outline: 1px;
   color: black;
@@ -50,8 +64,30 @@ body {
   cursor: pointer;
 }
 
+.headers {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.profile_nav {
+  float: right;
+  margin-left: auto;
+}
+
+ul.navbar-nav {
+  text-align: center;
+}
+
 .nav-link:focus {
   color: rgb(176, 46, 12);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
 }
 
 .page_content_1 {
@@ -67,38 +103,6 @@ body {
 .raiders {
   text-align: center;
 }
-/* EXPANSION NAV */
-
-.navbar-expansions {
-  background-color: rgb(41, 41, 41);
-  overflow: hidden;
-}
-
-.navbar-expansions a {
-  color: rgb(255, 255, 255);
-  border: 1px black solid;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 800;
-  padding: 15px 10px;
-  height: 70px;
-  text-align: center;
-  width: 25%;
-  /* Four links of equal widths */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar-expansions a:hover {
-  color: rgb(176, 46, 12);
-}
-
-.navbar-expansions a.is-featured:focus {
-  color: rgb(176, 46, 12);
-  border-bottom: 2px solid rgb(176, 46, 12);
-}
-/* EXPANSION NAV ENDS*/
 
 .wf-header-block {
   height: 70px;
@@ -106,36 +110,8 @@ body {
   justify-content: space-around;
 }
 
-.wf-tabs {
-  color: rgb(176, 46, 12);
-  padding: 15px 35px;
-  font-weight: 700;
-  text-decoration: none;
-  margin: 25px 0;
-  transition: background-color 200ms ease-in-out;
-  margin: 5px;
-}
-
-.wf-tabs li a {
-  color: black;
-  border: 1px solid;
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 15px 15px;
-  line-height: 1.1;
-  height: 70px;
-  vertical-align: middle;
-  display: table-cell;
-  flex-wrap: nowrap;
-  display: inline-block;
-}
-
-ul li a.exp-link {
-  color: red;
-  border: 1px solid black;
-  width: 100%;
-  margin: 5px;
-  text-decoration: none;
+div.container-fluid {
+  padding-left: 0;
 }
 
 .expansion_banner {
@@ -148,4 +124,26 @@ ul li a.exp-link {
 [type='checkbox']:checked + label:before {
   border-right: 2px solid rgb(176, 46, 12);
   border-bottom: 2px solid rgb(176, 46, 12);
+}
+
+ul.dropdown-menu {
+  border-radius: 0;
+  background-color: rgb(33, 37, 41);
+  font-weight: bold;
+  color: white;
+  float: left;
+  top: auto;
+}
+
+ul.dropdown-menu a {
+  color: white;
+  font-weight: bold;
+}
+
+ul.dropdown-menu a:hover {
+  background-color: rgb(176, 46, 12);
+}
+
+.dropdown-toggle {
+  background-color: transparent;
 }

@@ -4,10 +4,18 @@ const Raid = require('../models/raid');
 
 
 module.exports.index = async(req, res, next) => {
-    const expansions = await Expansion.find({_id: "60dc58717404dd38d85c4307"}).populate({
+    const {title} = req.query;
+    if (title) {
+    const expansions = await Expansion.find({title}).populate({
         path:'raids',
         options: {sort: {releaseDate: 1}}}).sort('releaseDate');
-    res.render('expansions/index', { expansions  });
+        res.render('expansions/index', { expansions, title });
+    } else {
+        const expansions = await Expansion.find({title: 'Warlords Of Draenor'}).populate({
+            path:'raids',
+            options: {sort: {releaseDate: 1}}}).sort('releaseDate');
+            res.render('expansions/index', { expansions, title });
+        }
 }
 
 module.exports.renderNewForm = (req, res) => {

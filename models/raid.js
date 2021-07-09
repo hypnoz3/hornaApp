@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
+const raidKills = require('./progress')
 
 const BannerSchema = new Schema({
     url: String,
@@ -14,7 +14,10 @@ const ExpansionSchema = new Schema({
 const RaidSchema = new Schema({
     title: String,
     releaseDate: Date,
-    expansion_id: String,
+    progress: [{
+        name: String,
+        boss: String,
+    }],
     banner: [BannerSchema],
 
 });

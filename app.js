@@ -111,7 +111,7 @@ const connectSrcUrls = [
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
 ];
-const fontSrcUrls = ["https://cdnjs.cloudflare.com/"];
+const fontSrcUrls = ["https://cdnjs.cloudflare.com/", "https://fonts.googleapis.com/" ];
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
