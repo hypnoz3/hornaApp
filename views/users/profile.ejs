@@ -1,62 +1,102 @@
 <% layout('layouts/boilerplate') %>
 
-    <div class="row container_profile d-flex justify-content-center align-items-center mt-2">
-        <b><h1 class="text-center mb-3">
-            <%= user.username.toUpperCase() %>
-        </h1></b>
-        <div class="row col-4 mb-3 ">
-            <div class="bg-dark text-white">
-                <div class="container_profile avatar">
+    <div class="profile_page row d-flex justify-content-center align-items-center mt-2">
+        <div class="profile_banner text-white">
+            <img src="https://res.cloudinary.com/amroeg/image/upload/v1626100572/Horna/dayv7hr-8b7d7e8e-0ecc-439e-ab5c-1f63678d082b_cyh3ty.png" alt="">
+            <h2><%=user.username.toUpperCase()%></h2>
+        </div>
+        <div class="profile mb-3 d-flex">
+                <div class="container_profile_avatar">
                     <% user.avatar.forEach((ava, i) => { %>
                         <% if(user.avatar.length)  {%>
                             <img class="avatar-img card-img-top w-100" src="<%= ava.url %>" alt="...">
                             <% }else {%>
                                 <img class="img-fluid" src="https://res.cloudinary.com/amroeg/image/upload/v1616051409/YelpCamp/img_568656_mgmzaw.png" alt="">
                                 <% } %>
+                                
+                </div>
+                <div class="application_box">
+                    <hr>
+                    <h4>My Application</h4>
                 </div>
                 <% }) %>
-                    <div class="card-body text-center">
-                        <div class="mb-3">
-                            <b><span>Username:</span>
-                            <b><a>
-                                <%=user.username.toUpperCase() %>
-                            </a></b>
+                <div class="profile_text">
+                        <div>
+                            <h4>Basic Information</h4>
                         </div>
-                        <div class="card-body text-center">
-                            <div class="mb-3">
-                                <b><span>Name:</span>
-                                <b><a>
+                        <div class="mb-2">
+                            <span>Username:</span>
+                            <a>
+                                <%=user.username.toUpperCase() %>
+                            </a>
+                        </div>
+                     
+                        <div class="mb-2">
+                                <span>Name:</span>
+                                <a>
                                 <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
-                            </a></b>
-                            </div>
-
-
-                            <div class="mb-3">
-                                <b><span>EMAIL:</span>
+                            </a>
+                        </div>
+                        
+                        <div class="mb-2">
+                                <span>EMAIL:</span>
                             <a>
                                 <%=user.email %>
                             </a>
-                        </b>
-                            </div>
-                            <% if(currentUser && currentUser._id.equals(user._id)) { %>
-                                <div class="card-body">
+                        
+                        </div>
+                        <br>
+                            <!-- <% if(currentUser && currentUser._id.equals(user._id)) { %>
+                        <div class="">
                                     <a class="ripple orange w-100" href="/users/<%= user._id %>/edit ">Edit</a>
-
-                                </div>
-                                <%} %>
-
-
-
                         </div>
-                        <div class="mb-3">
+                        <br>
+                                <%} %> -->
+<!--                         
+                        <div class="">
                             <b><a style="text-decoration: none;" href="/"><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
-                        </div>
+                        </div> -->
+                </div>
+                <div class="profile_text">
+                    <div>
+                        <h4>Basic Information</h4>
                     </div>
-
+                    <div class="mb-2">
+                        <span>Username:</span>
+                        <a>
+                            <%=user.username.toUpperCase() %>
+                        </a>
+                    </div>
+                 
+                    <div class="mb-2">
+                            <span>Name:</span>
+                            <a>
+                            <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-2">
+                            <span>EMAIL:</span>
+                        <a>
+                            <%=user.email %>
+                        </a>
+                    
+                    </div>
+                    <br>
+                        <!-- <% if(currentUser && currentUser._id.equals(user._id)) { %>
+                    <div class="">
+                                <a class="ripple orange w-100" href="/users/<%= user._id %>/edit ">Edit</a>
+                    </div>
+                    <br>
+                            <%} %> -->
+<!--                         
+                    <div class="">
+                        <b><a style="text-decoration: none;" href="/"><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
+                    </div> -->
             </div>
-
+                
+                
         </div>
-
         <script>
             function ConfirmDelete() {
                 var x = confirm("Are you sure you want to delete?");

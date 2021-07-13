@@ -1,5 +1,5 @@
-module.exports = [{
-
+module.exports = [
+{
 //Warlords of Draenor raids//
 
 name: "Hellfire Citadel",

@@ -1,8 +1,93 @@
-
 h1 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .card {
-    box-shadow: 0px 0px 20px 8px rgb(176, 46, 12);
+  box-shadow: 0px 0px 20px 8px rgb(176, 46, 12);
+}
+
+div.profile_banner {
+  width: 95%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  margin: 0 0;
+  outline: 2px solid rgb(19, 18, 18);
+  box-shadow: 0 0 12px black;
+}
+
+.profile_banner img {
+  width: 100%;
+  display: flex;
+  outline: 1px solid black;
+  align-items: center;
+}
+
+.profile_banner h2 {
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 10px;
+  left: 16px;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+  text-shadow: 0 0 5px rgb(176, 46, 12);
+}
+
+.profile_page {
+  position: relative;
+}
+
+.profile {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px;
+  padding-right: 500px;
+  top: 200px;
+  width: 95%;
+  height: 500px;
+  border: 2px solid rgb(19, 18, 18);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.container_profile_avatar {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 2px solid rgb(19, 18, 18);
+  box-shadow: 0 0 12px black;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  background-color: aqua;
+}
+
+.container_profile_avatar img {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 0;
+}
+
+.profile_text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(59, 1, 219);
+}
+
+.application_box {
+  width: 200px;
+  background-color: rgb(1, 219, 183);
+  align-self: flex-start;
 }
