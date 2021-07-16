@@ -89,12 +89,11 @@ const scriptSrcUrls = [
     "https://stackpath.bootstrapcdn.com/",
     "https://api.tiles.mapbox.com/",
     "https://api.mapbox.com/",
-    "https://kit.fontawesome.com/",
+    "https://kit.fontawesome.com/631b21e6e9.js",
     "https://cdnjs.cloudflare.com/",
     "https://cdn.jsdelivr.net",
     "https://code.jquery.com/jquery-3.6.0.min.js",
     "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-
 ];
 const styleSrcUrls = [
     "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css",
@@ -103,6 +102,7 @@ const styleSrcUrls = [
     "https://api.mapbox.com/",
     "https://api.tiles.mapbox.com/",
     "https://fonts.googleapis.com/",
+    "https://fonts.googleapis.com/icon",
     "https://use.fontawesome.com/",
 ];
 const connectSrcUrls = [
@@ -110,8 +110,9 @@ const connectSrcUrls = [
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
+    "https://use.fontawesome.com/"
 ];
-const fontSrcUrls = ["https://cdnjs.cloudflare.com/", "https://fonts.googleapis.com/" ];
+const fontSrcUrls = ["https://cdnjs.cloudflare.com/", "https://fonts.googleapis.com/","fonts.gstatic.com"];
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
@@ -130,7 +131,7 @@ app.use(
                 "https://cutewallpaper.org/",
                 "https://e7.pngegg.com/pngimages/487/112/png-clipart-roger-television-show-roger-american-dad-television-mammal-thumbnail.png"
             ],
-            fontSrc: ["'self'", ...fontSrcUrls],
+            fontSrc: ["'self'", "https://use.fontawesome.com/", ...fontSrcUrls],
         },
     })
 );

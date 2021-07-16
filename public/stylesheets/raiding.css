@@ -79,6 +79,7 @@ h2 {
   color: rgb(255, 255, 255);
   border-left: 2px solid rgb(25, 28, 31);
   text-transform: uppercase;
+  text-shadow: 3px 4px 5px black;
   font-size: 13px;
   font-weight: 700;
   padding: 15px 10px;

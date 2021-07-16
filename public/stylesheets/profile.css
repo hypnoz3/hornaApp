@@ -34,8 +34,8 @@ div.profile_banner {
   left: 16px;
   font-weight: 700;
   font-size: 50px;
-  color: black;
-  text-shadow: 0 0 5px rgb(176, 46, 12);
+  color: white;
+  text-shadow: 3px 4px 5px black;
 }
 
 .profile_page {
@@ -43,20 +43,23 @@ div.profile_banner {
 }
 
 .profile {
-  margin-top: 20px;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 20px;
-  padding-right: 500px;
+  padding-top: 20px;
+  padding-left: 30px;
   top: 200px;
   width: 95%;
   height: 500px;
-  border: 2px solid rgb(19, 18, 18);
+  /* border: 2px solid rgb(19, 18, 18); */
   color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  flex: auto;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+  background-color: rgb(20, 17, 17);
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .container_profile_avatar {
@@ -67,8 +70,6 @@ div.profile_banner {
   box-shadow: 0 0 12px black;
   margin: 0;
   display: flex;
-  gap: 10px;
-  background-color: aqua;
 }
 
 .container_profile_avatar img {
@@ -77,17 +78,31 @@ div.profile_banner {
   align-items: center;
   padding: 5px;
   margin: 0;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
 }
 
 .profile_text {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background-color: rgb(59, 1, 219);
+  margin-left: 20px;
+  text-shadow: 3px 4px 5px black;
+}
+
+.profile_text a {
+  text-indent: 2em;
+  text-shadow: 3px 4px 5px black;
+}
+
+.hide a {
+  color: rgb(78, 74, 74);
+}
+
+.profile_text:hover + .hide {
+  display: block;
 }
 
 .application_box {
   width: 200px;
-  background-color: rgb(1, 219, 183);
-  align-self: flex-start;
 }
