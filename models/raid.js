@@ -14,10 +14,7 @@ const ExpansionSchema = new Schema({
 const RaidSchema = new Schema({
     title: String,
     releaseDate: Date,
-    progress: [{
-        name: String,
-        boss: String,
-    }],
+    progress: String,
     banner: [BannerSchema],
 
 });

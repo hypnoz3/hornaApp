@@ -141,7 +141,8 @@ ul.dropdown-menu a {
 }
 
 ul.dropdown-menu a:hover {
-  background-color: rgb(176, 46, 12);
+  color: rgb(176, 46, 12);
+  background-color: rgb(33, 37, 41);
 }
 
 .dropdown-toggle {

@@ -1,0 +1,24 @@
+{
+  "name": "Horna",
+  "faction": "horde",
+  "region": "eu",
+  "realm": "Twisting Nether",
+  "last_crawled_at": "2021-07-28T07:46:13.000Z",
+  "profile_url": "https://raider.io/guilds/eu/twisting-nether/Horna",
+  "raid_progression": {
+    "castle-nathria": {
+      "summary": "6/10 M",
+      "total_bosses": 10,
+      "normal_bosses_killed": 10,
+      "heroic_bosses_killed": 10,
+      "mythic_bosses_killed": 6
+    },
+    "sanctum-of-domination": {
+      "summary": "8/10 H",
+      "total_bosses": 10,
+      "normal_bosses_killed": 10,
+      "heroic_bosses_killed": 8,
+      "mythic_bosses_killed": 0
+    }
+  }
+}

@@ -75,46 +75,55 @@ h2 {
   border: 2px solid rgb(25, 28, 31);
 }
 
-.navbar-expansions a {
+div.nav-exp {
   color: rgb(255, 255, 255);
   border-left: 2px solid rgb(25, 28, 31);
   text-transform: uppercase;
   text-shadow: 3px 4px 5px black;
   font-size: 13px;
   font-weight: 700;
-  padding: 15px 10px;
   height: 70px;
   text-align: center;
   width: 25%;
+  padding: 0;
   /* Four links of equal widths */
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.navbar-expansions a:nth-of-type(1) {
+.nav-exp a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  vertical-align: middle;
+}
+
+.navbar-expansions .nav-exp:after {
+  position: relative;
+  top: 15px;
+  display: block;
+  content: '';
+  border-top: solid 3px rgb(176, 46, 12);
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.navbar-expansions .nav-exp:hover:after {
+  transform: scaleX(1);
+  color: rgb(176, 46, 12);
+}
+
+.navbar-expansions .nav-exp:nth-of-type(1) {
   border-left: none;
 }
 
-.navbar-expansions a:hover {
+/* .navbar-expansions a.is-featured:focus {
   color: rgb(176, 46, 12);
   border-bottom: 2px solid rgb(176, 46, 12);
-  transform: none;
-}
-
-.navbar-expansions a.is-featured:focus {
-  color: rgb(176, 46, 12);
-  border-bottom: 2px solid rgb(176, 46, 12);
-}
+} */
 /* EXPANSION NAV ENDS*/
-
-ul li a.exp-link {
-  color: red;
-  border: 1px solid black;
-  width: 100%;
-  margin: 5px;
-  text-decoration: none;
-}
 
 /* EXPANSION */
 
@@ -135,6 +144,7 @@ ul li a.exp-link {
   bottom: 50%;
   align-items: center;
   position: relative;
+  text-shadow: 3px 4px 5px black;
 }
 
 .expansion_info h2 {
@@ -167,6 +177,40 @@ span.expansion_releaseDate {
   flex-direction: row;
   margin-top: 20px;
 }
+.progress_box {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  flex-direction: column;
+}
+
+.progress_text {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 200px;
+  text-shadow: 3px 4px 5px black;
+  border: 2px solid rgb(25, 28, 31);
+  padding: 10px;
+  background-color: rgb(41, 41, 41);
+}
+
+.progress_text h1 {
+  margin: 0;
+}
+h1:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px rgb(176, 46, 12);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.progress_text h1:hover:after {
+  transform: scaleX(1);
+  color: rgb(176, 46, 12);
+  cursor: pointer;
+}
 
 .progress_table {
   display: flex;
@@ -174,13 +218,34 @@ span.expansion_releaseDate {
   margin-left: auto;
   margin-right: 50px;
   font-size: 15px;
+  border: 1px solid black;
+  box-shadow: 0 0 12px black;
 }
+
+tr:nth-child(even) {
+  background-color: rgb(20, 17, 17);
+}
+
+tr:hover {
+  background-color: rgb(63, 62, 61);
+}
+td {
+  height: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+td:hover {
+  cursor: pointer;
+}
+
 .raid_info {
   margin-left: 0;
   top: 50%;
   bottom: 50%;
   align-items: center;
   position: relative;
+  text-shadow: 3px 4px 5px black;
 }
 
 .raid_info h2 {
