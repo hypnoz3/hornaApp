@@ -11,7 +11,7 @@ module.exports.index = async(req, res, next) => {
         options: {sort: {releaseDate: 1}}}).sort('releaseDate');
         res.render('expansions/index', { expansions, title });
     } else {
-        const expansions = await Expansion.find({title: 'Warlords Of Draenor'}).populate({
+        const expansions = await Expansion.find({title: 'Shadowlands'}).populate({
             path:'raids',
             options: {sort: {releaseDate: 1}}}).sort('releaseDate');
             res.render('expansions/index', { expansions, title });

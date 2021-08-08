@@ -110,7 +110,8 @@ const connectSrcUrls = [
     "https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
-    "https://use.fontawesome.com/"
+    "https://use.fontawesome.com/",
+    "https://raider.io/"
 ];
 const fontSrcUrls = ["https://cdnjs.cloudflare.com/", "https://fonts.googleapis.com/","fonts.gstatic.com"];
 app.use(

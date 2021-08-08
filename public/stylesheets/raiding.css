@@ -108,8 +108,11 @@ div.nav-exp {
   border-top: solid 3px rgb(176, 46, 12);
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
+  z-index: 2;
 }
-
+.nav-exp a:hover {
+  color: rgb(176, 46, 12);
+}
 .navbar-expansions .nav-exp:hover:after {
   transform: scaleX(1);
   color: rgb(176, 46, 12);

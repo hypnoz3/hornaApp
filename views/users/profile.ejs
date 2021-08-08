@@ -1,11 +1,11 @@
 <% layout('layouts/boilerplate') %>
 
-    <div class="profile_page row d-flex justify-content-center align-items-center mt-2">
+    <div class="profile_page row d-flex justify-content-center align-items-center mt-2 mb-2">
         <div class="profile_banner text-white">
             <img src="https://res.cloudinary.com/amroeg/image/upload/v1626100572/Horna/dayv7hr-8b7d7e8e-0ecc-439e-ab5c-1f63678d082b_cyh3ty.png" alt="">
             <h2><%=user.username.toUpperCase()%></h2>
         </div>
-        <div class="profile mb-3 d-flex">
+        <div class="profile mb-3 mt-2 d-flex">
                 <div class="container_profile_avatar">
                     <% user.avatar.forEach((ava, i) => { %>
                         <% if(user.avatar.length)  {%>

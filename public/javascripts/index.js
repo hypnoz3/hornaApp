@@ -14,7 +14,20 @@ buttons.forEach((btn) => {
   })
 
  
+const progress = 'https://raider.io/api/v1/guilds/profile?region=eu&realm=Twisting-nether&name=Horna&fields=raid_progression';
+const progressBOX_nathria = document.getElementById('progress_nathria');
 
-
-
+async function getProgress(url) {
+  const res = await fetch(url);
+  const data = await res.json();
+  const { raid_progression} = data
   
+  console.log(raid_progression['castle-nathria'].summary)
+}
+
+
+getProgress(progress)
+
+
+
+

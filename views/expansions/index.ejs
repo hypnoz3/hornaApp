@@ -57,34 +57,14 @@
                         </div>  
                         <span class="raid_releaseDate"><%= raid.releaseDate.toLocaleString('fi-FI', { day: '2-digit', month: '2-digit', year: 'numeric'})  %> </span>
                     </div>  
-                    
+                    <% if (raid.progress) {%>
                     <div class="progress_box">
                         <div class="progress_text">
-                            <h1>6/10 M</h1>
+                             
+                            <h1><%= raid.progress %></h1>
+                            <% } %> 
                         </div>
                     </div>
-                    <!-- <div class="progress_table">
-                        <table>
-                            <thead>
-                            <th>Boss</th>
-                            <th>Kill Date</th>
-                            <th>Difficulty</th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Sylvanas Windrunner</td>
-                            <td>23.11.2020</td>
-                            <td>Mythic</td>
-                        </tr>
-                        <tr>
-                            <td>Sylvanas Windrunner</td>
-                            <td>23.11.2020</td>
-                            <td>Mythic</td>
-                        </tr>
-                    </tbody>
-                        </table>
-                    </div> -->
-                   
                         <div class="banner">
                         <img class="raid_banner" src="<%= raid.banner[0].url  %> " alt=" ">
                         </div>
