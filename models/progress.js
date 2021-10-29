@@ -3,17 +3,105 @@ module.exports = [
 //Warlords of Draenor raids//
 
 name: "Hellfire Citadel",
-boss1: "Hellfire Assault",
-boss2: "Iron Reaver",
-boss3: "Kormrok",
-boss4: "Hellfire High Council",
-boss5: "Kilrogg Deadeye",
-boss6: "Gorefiend",
-boss7: "Shadow-Lord Iskar",
-boss8: "Socrethar the Eternal",
-boss9: "Tyrant Velhari",
-boss10: "Fel Lord Zakuun",
-boss11: "Xhul'horac",
+boss1: {
+    name:"Hellfire Assault",
+    killdate: "3.11.2015",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss2: {
+    name:"Iron Reaver",
+    killdate: "19.11.2015",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss3: {
+    name:"Kormrok",
+    killdate: "22.11.2015",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss4: {
+    name:"Hellfire High Council",
+    killdate: "26.11.2015",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss5: {
+    name:"Kilrogg Deadeye",
+    killdate: "3.12.2015",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss6: {
+    name:"Gorefiend",
+    killdate: "24.1.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss7: {
+    name:"Shadow-Lord Iskar",
+    killdate: "7.2.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss8: {
+    name:"Socrethar the Eternal",
+    killdate: "4.2.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss9: {
+    name:"Tyrant Velhari",
+    killdate: "6.3.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss10: {
+    name:"Fel Lord Zakuun",
+    killdate: "14.2.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
+boss11: {
+    name:"Xhul'horac",
+    killdate: "10.4.2016",
+    difficulty: {
+        normal:false,
+        heroic:false,
+        mythic:true,
+      }
+    },
 boss12: "Mannoroth",
 boss13: "Archimonde"
 },

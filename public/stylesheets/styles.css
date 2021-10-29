@@ -4,10 +4,11 @@ body {
 
 .container-xxl {
   width: 1400px;
-  height: 2000px;
-  box-shadow: 0px 0px 50px 5px rgb(176, 46, 12);
+  height: 5000px;
+  box-shadow: 0px 0px 30px 5px rgb(176, 46, 12);
   background-color: rgb(35, 37, 35);
   background-repeat: no-repeat;
+  text-shadow: 2px 2px 5px black;
 }
 
 hr {
@@ -33,7 +34,6 @@ hr {
 .banner_container {
   margin-top: 0;
 }
-
 .button_login {
   background-color: none;
   font-weight: 700;
@@ -52,16 +52,21 @@ hr {
 .nav-item {
   outline: 1px;
   color: black;
-  font-weight: 700;
+  font-weight: 400;
   transition: all 0.25s;
   height: 3em;
   text-align: center;
+  text-shadow: 3px 4px 5px black;
 }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
   color: rgb(176, 46, 12);
   cursor: pointer;
+}
+
+.headers .navbar-nav .nav-item .nav-link:after:visited {
+  color: rgb(176, 46, 12);
 }
 
 .headers {
@@ -141,7 +146,8 @@ ul.dropdown-menu a {
 }
 
 ul.dropdown-menu a:hover {
-  background-color: rgb(176, 46, 12);
+  color: rgb(176, 46, 12);
+  background-color: rgb(33, 37, 41);
 }
 
 .dropdown-toggle {

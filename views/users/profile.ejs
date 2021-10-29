@@ -1,11 +1,11 @@
 <% layout('layouts/boilerplate') %>
 
-    <div class="profile_page row d-flex justify-content-center align-items-center mt-2">
+    <div class="profile_page row d-flex justify-content-center align-items-center mt-2 mb-2">
         <div class="profile_banner text-white">
             <img src="https://res.cloudinary.com/amroeg/image/upload/v1626100572/Horna/dayv7hr-8b7d7e8e-0ecc-439e-ab5c-1f63678d082b_cyh3ty.png" alt="">
             <h2><%=user.username.toUpperCase()%></h2>
         </div>
-        <div class="profile mb-3 d-flex">
+        <div class="profile mb-3 mt-2 d-flex">
                 <div class="container_profile_avatar">
                     <% user.avatar.forEach((ava, i) => { %>
                         <% if(user.avatar.length)  {%>
@@ -15,37 +15,32 @@
                                 <% } %>
                                 
                 </div>
-                <div class="application_box">
-                    <hr>
-                    <h4>My Application</h4>
-                </div>
+                
                 <% }) %>
                 <div class="profile_text">
-                        <div>
+                        <div class="mb-2">
                             <h4>Basic Information</h4>
                         </div>
                         <div class="mb-2">
                             <span>Username:</span>
-                            <a>
-                                <%=user.username.toUpperCase() %>
-                            </a>
+                            <p>
+                                <%=user.username %>
+                            </p>
                         </div>
-                     
                         <div class="mb-2">
                                 <span>Name:</span>
-                                <a>
-                                <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
-                            </a>
+                                <p>
+                                <%=user.firstName +' ' + user.lastName %>
+                                </p>
                         </div>
-                        
                         <div class="mb-2">
-                                <span>EMAIL:</span>
-                            <a>
-                                <%=user.email %>
-                            </a>
-                        
+                                <span>Email: <p>
+                                    <%=user.email %>
+                                </p></span>
                         </div>
-                        <br>
+                        <div class="edit_icon">
+                        <div class="hide"><a href="/users/<%= user._id %>/edit"><i class="material-icons edit">create</i></a></div>
+                    </div>
                             <!-- <% if(currentUser && currentUser._id.equals(user._id)) { %>
                         <div class="">
                                     <a class="ripple orange w-100" href="/users/<%= user._id %>/edit ">Edit</a>
@@ -56,45 +51,14 @@
                         <div class="">
                             <b><a style="text-decoration: none;" href="/"><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
                         </div> -->
+                      
                 </div>
-                <div class="profile_text">
-                    <div>
-                        <h4>Basic Information</h4>
-                    </div>
-                    <div class="mb-2">
-                        <span>Username:</span>
-                        <a>
-                            <%=user.username.toUpperCase() %>
-                        </a>
-                    </div>
-                 
-                    <div class="mb-2">
-                            <span>Name:</span>
-                            <a>
-                            <%=user.firstName.toUpperCase() +' ' + user.lastName.toUpperCase() %>
-                        </a>
-                    </div>
-                    
-                    <div class="mb-2">
-                            <span>EMAIL:</span>
-                        <a>
-                            <%=user.email %>
-                        </a>
-                    
-                    </div>
-                    <br>
-                        <!-- <% if(currentUser && currentUser._id.equals(user._id)) { %>
-                    <div class="">
-                                <a class="ripple orange w-100" href="/users/<%= user._id %>/edit ">Edit</a>
-                    </div>
-                    <br>
-                            <%} %> -->
-<!--                         
-                    <div class="">
-                        <b><a style="text-decoration: none;" href="/"><img src="https://res.cloudinary.com/amroeg/image/upload/v1616012862/YelpCamp/arrow-left_nnx5ki.svg" alt="">Back</a></b>
-                    </div> -->
-            </div>
-                
+                <!-- <div class="break"></div>
+                <div class="application_box">
+                    <hr>
+                    <h4>My Application</h4>
+                </div>
+                 -->
                 
         </div>
         <script>
