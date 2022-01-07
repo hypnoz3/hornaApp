@@ -182,8 +182,8 @@ img.role {
 }
 
 .classtext {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   margin-bottom: 20px;
 }
 
