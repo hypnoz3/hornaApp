@@ -153,3 +153,8 @@ ul.dropdown-menu a:hover {
 .dropdown-toggle {
   background-color: transparent;
 }
+
+
+.youtube {
+  box-shadow: 0 0 12px black;
+}

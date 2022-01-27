@@ -174,9 +174,7 @@ span.expansion_releaseDate {
 }
 
 .raid_banner {
-  -webkit-box-shadow: inset 0 0 10px 10px #000;
-  -moz-box-shadow: inset 0 0 10px 10px #000;
-  box-shadow: inset 0 0 10px 10px #000;
+  box-shadow: 0 0 12px black;
   max-width: 600px;
   justify-content: flex-end;
   position: relative;
