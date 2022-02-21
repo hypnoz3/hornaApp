@@ -1,53 +1,52 @@
 <% layout('layouts/boilerplate') %>
     <div class="container_register d-flex justify-content-center align-items-center mb-5">
         <div class="row">
-            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
-                <div class="card shadow bg-dark text-white">
-                    <img src="https://res.cloudinary.com/amroeg/image/upload/v1617888317/Horna/adam-torn-qcglhps_g2kqof.jpg" alt="" class="card-img-top" />
+            <div class="col-md-6 offset-md-4 col-xl-4 offset-xl-0 w-auto">
+                <div class="bg-dark text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Register</h5>
+                        <h5 class="card-title text-center">Rekisteröinti</h5>
                         <form action="/register" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
                             <div class="mb-3 ">
-                                <label class="form-label" for="username">Username</label>
+                                <label class="form-label" for="username">Käyttäjänimi</label>
                                 <input class="form-control" type="text" id="username" name="username" required autofocus>
                                 <div class="valid-feedback ">
-                                    Looks Good!
+                                    Kaikki kunnossa!
                                 </div>
                             </div>
                             <div class="mb-3 ">
-                                <label class="form-label" for="firstName">First Name</label>
+                                <label class="form-label" for="firstName">Etunimi</label>
                                 <input class="form-control" type="text" id="firstName" name="firstName" required>
                                 <div class="valid-feedback ">
-                                    Looks Good!
+                                    Kaikki kunnossa!
                                 </div>
                             </div>
                             <div class="mb-3 ">
-                                <label class="form-label" for="lastName">Last Name</label>
+                                <label class="form-label" for="lastName">Sukunimi</label>
                                 <input class="form-control" type="text" id="lastName" name="lastName" required>
                                 <div class="valid-feedback ">
-                                    Looks Good!
+                                    Kaikki kunnossa!
                                 </div>
                             </div>
                             <div class="mb-3 ">
-                                <label class="form-label" for="email">Email</label>
+                                <label class="form-label" for="email">Sähköposti</label>
                                 <input class="form-control" type="email" id="email" name="email" required>
                                 <div class="valid-feedback">
-                                    Looks Good!
+                                    Kaikki kunnossa!
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="password">Password</label>
+                                <label class="form-label" for="password">Salasana</label>
                                 <input class="form-control" type="password" id="password" name="password" required>
                                 <div class="valid-feedback ">
-                                    Looks Good!
+                                    Kaikki kunnossa!
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Avatar</label>
-                                <input class="form-control" type="file" id="avatar" name="avatar" multiple>
+                                <input class="form-control" type="file" id="avatar" name="avatar">
                             </div>
 
-                            <button class="ripple orange w-100">Register</button>
+                            <button class="ripple orange w-100">Rekisteröidy</button>
                         </form>
                     </div>
 

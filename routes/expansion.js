@@ -1,5 +1,3 @@
-const Expansion = require('../models/expansion');
-const { isLoggedIn, isAuthor, validateCampground } = require('../middleware');
 const catchAsync = require('../utils/catchAsync');
 const express = require('express');
 const multer = require('multer');

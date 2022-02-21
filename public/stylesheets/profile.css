@@ -53,8 +53,8 @@ div.profile_banner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
-  background-color: rgb(20, 17, 17);
+  /*box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9);
+  background-color: rgb(20, 17, 17);*/
 }
 
 .break {

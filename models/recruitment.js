@@ -1,4 +1,4 @@
-const { string } = require('joi');
+const { string, boolean } = require('joi');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -16,6 +16,8 @@ const recruitmentSchema = new Schema({
    class: {
        name: string,
        classicon:[classIconSchema],
+       roleicon: [roleIconSchema],
+       status: boolean,
        
 
    }

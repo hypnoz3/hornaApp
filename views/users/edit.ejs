@@ -3,7 +3,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="card shadow bg-dark text-white">
-
                     <div class="card-body">
                         <h5 class="card-title text-center">Update your profile</h5>
                         <form action="/users/<%= user._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
@@ -44,7 +43,7 @@
                             </div> -->
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Avatar</label>
-                                <input class="form-control" type="file" id="avatar" name="avatar" multiple>
+                                <input class="form-control" type="file" id="avatar" name="avatar">
                             </div>
 
                             <div class="mb-3">

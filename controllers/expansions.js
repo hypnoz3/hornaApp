@@ -1,7 +1,4 @@
-const { cloudinary } = require('../cloudinary');
 const Expansion = require('../models/expansion');
-const Raid = require('../models/raid');
-
 
 module.exports.index = async(req, res, next) => {
     const {title} = req.query;
