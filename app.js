@@ -23,10 +23,7 @@ const raidRoutes = require('./routes/raid');
 
 const MongoStore = require('connect-mongo')(session);
 
-
-//,
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/horna';
-
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
