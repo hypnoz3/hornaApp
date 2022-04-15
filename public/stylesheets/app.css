@@ -165,7 +165,15 @@ h3 {
 
 .classicon {
   height: 150px;
+  transition: 2s;
 }
+
+.classicon:hover:after .classtext {
+  visibility: visible;
+  opacity: 1;
+  transition: 2s;
+}
+
 
 img.role {
   height: 35px;
@@ -173,7 +181,26 @@ img.role {
   position: absolute;
   right: 10%;
   bottom: 10%;
+  transition: 2s;
 }
+
+.hide {
+  display: none;
+}
+
+.classtext {
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 20px;
+  transition: 2s;
+}
+
+img.role:hover + .hide {
+  display: block;
+  transition: 2s;
+}
+
+
 
 /* .nav-area a {
   text-transform: uppercase;

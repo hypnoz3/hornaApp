@@ -108,13 +108,14 @@ const connectSrcUrls = [
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
     "https://use.fontawesome.com/",
-    "https://raider.io/"
+    "https://raider.io/",
+    "https://www.youtube.com/"
 ];
 const fontSrcUrls = ["https://cdnjs.cloudflare.com/", "https://fonts.googleapis.com/","fonts.gstatic.com"];
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
-            defaultSrc: [],
+            defaultSrc: ['https://www.youtube.com/'],
             connectSrc: ["'self'", ...connectSrcUrls],
             scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
@@ -127,7 +128,8 @@ app.use(
                 "https://res.cloudinary.com/amroeg/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
                 "https://cutewallpaper.org/",
-                "https://e7.pngegg.com/pngimages/487/112/png-clipart-roger-television-show-roger-american-dad-television-mammal-thumbnail.png"
+                "https://e7.pngegg.com/pngimages/487/112/png-clipart-roger-television-show-roger-american-dad-television-mammal-thumbnail.png", 
+                "https://www.youtube.com/"
             ],
             fontSrc: ["'self'", "https://use.fontawesome.com/", ...fontSrcUrls],
         },
@@ -172,6 +174,10 @@ app.get('/recruitment', (req, res) => {
     res.render('recruitment')
 })
 
+app.get('/youtube', (req, res) => {
+    res.render('youtube')
+})
+
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
@@ -183,7 +189,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err })
 })
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3300;
 
 app.listen(port, () => {
     console.log(`Serving on port ${port}`)

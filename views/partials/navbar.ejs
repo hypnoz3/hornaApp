@@ -22,7 +22,7 @@
                             <a class="nav-link is-featured" href="/expansions/">RAID-HISTORIA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link is-featured " href="https://www.youtube.com/channel/UCq3dL3--J4f1RyLYmi6SwKQ">YOUTUBE</a>
+                            <a class="nav-link is-featured " href="/youtube">YOUTUBE</a>
                         </li>
                     </ul>
                 </div>
@@ -31,11 +31,6 @@
                         <a class="nav-link" href="/login">KIRJAUDU</a>
                         <a class="nav-link" href="/register">REKISTERÖINTI</a>
                         <% } else {%>
-                            <div class="container_nav_picture" style="max-height: 32px;">
-                                
-                                    <img class="avatar-img w-100" style="max-width: 32px; max-height: 32px; padding-top: 3px; object-fit: contain;" src="<%= currentUser.avatar[0].url %>" alt="...">
-                                    
-                            </div>
                             
                             <b><li class="nav-item dropdown"><a class="nav-link" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><%=currentUser.username.toUpperCase()%></a>
                                 <ul class="dropdown-menu dropdown-menu-right aria-labelledby="navbarDropdown">

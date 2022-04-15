@@ -174,8 +174,12 @@ span.expansion_releaseDate {
 }
 
 .raid_banner {
+<<<<<<< HEAD
   
   box-shadow: 0 0 12px #000;
+=======
+  box-shadow: 0 0 12px black;
+>>>>>>> 3c0266b91c31d29aa26ffa72085fc95bdca1c4e0
   max-width: 600px;
   justify-content: flex-end;
   position: relative;
